@@ -16,3 +16,9 @@ function table_based_effect() {
     return 'wild magic : ' + wild_magic_table[Math.floor(Math.random() * wild_magic_table.length)];
   }
 }
+
+$('document').ready(function() {
+  $(".generate-button").click(function() {
+    $('.description').html(table_based_effect());
+  });
+});
